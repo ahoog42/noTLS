@@ -4,11 +4,15 @@
 
 .DS_Store
 
+## Build generated
+build/
+
 ## User settings
 xcuserdata/
 
 ## XCode User state
 *.xcuserstate
+# No TLS.xcodeproj/project.xcworkspace/xcuserdata/hiro.xcuserdatad/UserInterfaceState.xcuserstate
 
 ## Obj-C/Swift specific
 *.hmap
