@@ -13,8 +13,9 @@ protocol MenuItemManagerDelegate {
 }
 
 struct MenuItemManager {
-    let apiUrl = "http://localhost:7001/api/menu/menuitems/"
-    
+//    let apiUrl = "http://localhost:7001/api/menu/menuitems/"
+    let apiUrl = "http://notls.andrewhoog.com/api/menu/menuitems/"
+
     var delegate: MenuItemManagerDelegate?
     
     func performRequest() {
