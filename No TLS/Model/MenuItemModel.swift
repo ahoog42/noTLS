@@ -9,4 +9,8 @@ import Foundation
 
 struct MenuItemModel {
     let menuItems: [String]
+    
+    func getCount() -> Int {
+        return menuItems.count
+    }
 }
