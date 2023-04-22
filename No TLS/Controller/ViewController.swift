@@ -9,6 +9,16 @@ import UIKit
 
 class ViewController: UIViewController, MenuItemManagerDelegate  {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        menuItemManager.delegate = self
+    }
+    
+    var menuItems: [String] = []
+    var itemsString: String = ""
+    var menuItemManager = MenuItemManager()
+    @IBOutlet weak var menuItemLabel: UILabel!
+    
     func didUpdateMenuItemData(_ menuItemManager: MenuItemManager, _ menuItemsModel: MenuItemModel) {
         DispatchQueue.main.async {
             self.menuItemLabel.text = "Updating..."
@@ -21,31 +31,13 @@ class ViewController: UIViewController, MenuItemManagerDelegate  {
         }
     }
     
-//    func didUpdateMenuItemData(_ menuItemManager: MenuItemManager, _ menuItemsModel: MenuItemModel) {
-//        print("triggered didUpdateMenuItemData in ViewController")
-//        print(menuItemsModel)
-//    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        menuItemManager.delegate = self
-    }
-    
-    var menuItems: [String] = []
-    var itemsString: String = ""
-    var menuItemManager = MenuItemManager()
-    @IBOutlet weak var menuItemLabel: UILabel!
-    
     @IBAction func fetchInsecurePressed(_ sender: Any) {
         menuItemLabel.text = "Processing..."
         menuItemManager.performRequest()
-        print(menuItemManager.apiUrl)
     }
-    
-    
     
     func didFailWithError(error: Error) {
         print(error)
     }
 }
-    
+
