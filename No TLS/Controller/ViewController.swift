@@ -33,16 +33,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     var menuItems: [String] = []
-    var itemsString: String = ""
     var menuItemManager = MenuItemManager()
     @IBOutlet weak var menuItemLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     func didUpdateMenuItemData(_ menuItemManager: MenuItemManager, _ menuItemsModel: MenuItemModel) {
         DispatchQueue.main.async {
+            self.menuItems = []
             menuItemsModel.menuItems.forEach { menuItem in
                 print("menuItem in ViewController didUpdateMenuItemData: \(menuItem)")
-                self.itemsString += "\(menuItem)\r"
                 self.menuItems.append(menuItem)
             }
             self.tableView.reloadData()
