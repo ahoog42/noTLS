@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,11 +56,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2T8-Wu-KTl">
                                 <rect key="frame" x="332" y="93" width="48" height="35"/>
+                                <accessibility key="accessibilityConfiguration" label="User Profile"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Qg6-46-4wd"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="person" catalog="system" title=""/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <imageReference key="image" image="person" catalog="system" variableValue="0.80000000000000004"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="personPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="04T-g7-iiH"/>
                                 </connections>
