@@ -1,4 +1,4 @@
-name: "Build iOS app"
+name: "Build and scan - static only"
 
 on:
   # manual trigger but change to any supported event
