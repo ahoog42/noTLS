@@ -103,6 +103,12 @@ jobs:
           # Generated in the "build" stage.
           name: app
 
+      - name: Debug file paths
+        run: ls -ltR
+
+      - name: 'Echo download path'
+        run: echo ${{steps.app.outputs.download-path}}
+
       - id: upload
         name: NowSecure upload app
         uses: nowsecure/nowsecure-action/upload-app@v3
