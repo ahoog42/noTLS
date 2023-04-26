@@ -103,16 +103,13 @@ jobs:
           # Generated in the "build" stage.
           name: app
 
-      - name: Debug file paths
-        run: ls -ltR
-
       - id: upload
         name: NowSecure upload app
         uses: nowsecure/nowsecure-action/upload-app@v3
         with:
           platform_token: ${{ secrets.NS_TOKEN }}
           # TODO: Replace application path.
-          app_file: ${{ runner.temp }}/build/No\ TLS.ipa
+          app_file: No\ TLS.ipa
           # TODO: Replace the Group ID.
           group_id: "e864bd04-d411-47a0-b028-7a1627e32c2b"
 
