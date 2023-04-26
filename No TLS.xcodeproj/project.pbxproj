@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		455A9F9929F89ABE001AE228 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455A9F9829F89ABE001AE228 /* ProfileViewController.swift */; };
 		4567177229F185DF00D160BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567177129F185DF00D160BB /* AppDelegate.swift */; };
 		4567177429F185DF00D160BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567177329F185DF00D160BB /* SceneDelegate.swift */; };
 		4567177629F185DF00D160BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567177529F185DF00D160BB /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		455A9F9829F89ABE001AE228 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4567176E29F185DF00D160BB /* No TLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "No TLS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4567177129F185DF00D160BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4567177329F185DF00D160BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				4567177529F185DF00D160BB /* ViewController.swift */,
+				455A9F9829F89ABE001AE228 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				4567178B29F1E5EC00D160BB /* MenuItemData.swift in Sources */,
 				4567178829F1E27200D160BB /* MenuItemManager.swift in Sources */,
 				4567177229F185DF00D160BB /* AppDelegate.swift in Sources */,
+				455A9F9929F89ABE001AE228 /* ProfileViewController.swift in Sources */,
 				4567177429F185DF00D160BB /* SceneDelegate.swift in Sources */,
 				4567178D29F1EE8700D160BB /* MenuItemModel.swift in Sources */,
 			);
