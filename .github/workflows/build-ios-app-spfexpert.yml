@@ -103,6 +103,9 @@ jobs:
           # Generated in the "build" stage.
           name: app
 
+      - name: Debug file paths
+        run: ls -ltR
+
       - id: upload
         name: NowSecure upload app
         uses: nowsecure/nowsecure-action/upload-app@v3
