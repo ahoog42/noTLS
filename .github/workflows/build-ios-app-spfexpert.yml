@@ -103,15 +103,6 @@ jobs:
           # Generated in the "build" stage.
           name: app
 
-      - name: Debug file paths
-        run: |
-          pwd
-          ls -l
-          file No\ TLS.ipa
-
-      - name: 'Echo download path'
-        run: echo ${{steps.app.outputs.download-path}}
-
       - id: upload
         name: NowSecure upload app
         uses: nowsecure/nowsecure-action/upload-app@v3
@@ -125,6 +116,16 @@ jobs:
   process:
     if: ${{ needs.scan.outputs.report_id }}
     runs-on: ubuntu-latest
+
+    # permission needed for upload-sarif@v2
+    permissions:
+      # required for all workflows
+      security-events: write
+
+      # only required for workflows in private repositories
+      actions: read
+      contents: read
+
     # The above stage we introduced.
     needs: scan
     steps:
