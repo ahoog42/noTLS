@@ -106,7 +106,8 @@ jobs:
       - name: Debug file paths
         run: |
           pwd
-          ls -ltR
+          ls -l
+          file No\ TLS.ipa
 
       - name: 'Echo download path'
         run: echo ${{steps.app.outputs.download-path}}
@@ -117,7 +118,7 @@ jobs:
         with:
           platform_token: ${{ secrets.NS_TOKEN }}
           # TODO: Replace application path.
-          app_file: /home/runner/work/noTLS/noTLS/No\ TLS.ipa
+          app_file: "No TLS.ipa"
           # TODO: Replace the Group ID.
           group_id: "e864bd04-d411-47a0-b028-7a1627e32c2b"
 
